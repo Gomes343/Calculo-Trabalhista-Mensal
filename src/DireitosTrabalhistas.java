@@ -31,13 +31,13 @@ public final class DireitosTrabalhistas{
     }
     public void calcularINSS(double salario){
        if (salario <= 1659.38){
-          INSS_fer_decimo = (salario * 0.08) * 2;
+          INSS_fer_decimo = ((salario / 12) * 0.08) * 2;
        }
        if ( (salario >= 1659.39) & (salario <= 2765.66) ){
-          INSS_fer_decimo = (salario * 0.09) * 2; 
+          INSS_fer_decimo = ((salario / 12) * 0.09) * 2; 
        }
        if ( (salario >= 2765.67) ){
-          INSS_fer_decimo = (salario * 0.11) * 2;
+          INSS_fer_decimo = ((salario / 12) * 0.11) * 2;
        }
     }
     public void calcularIRRF(double salario){

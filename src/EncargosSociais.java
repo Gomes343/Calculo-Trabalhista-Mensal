@@ -15,15 +15,17 @@ public final class EncargosSociais{
     }
     public void calcularINSS(double salario){
        if (salario <= 1659.38){
-          aliquotaINSS = 0.08;
+          vlr_INSS = salario * 0.08;
        }
        if ( (salario >= 1659.39) & (salario <= 2765.66) ){
-          aliquotaINSS = 0.09; 
+          vlr_INSS = salario * 0.09; 
        }
        if ( (salario >= 2765.67) ){
-          aliquotaINSS = 0.11;
+          vlr_INSS = salario * 0.11;
        }
-       vlr_INSS = salario * aliquotaINSS;
+       if( (vlr_INSS > 608.44) ){
+          vlr_INSS = 608.44;
+       }
     }
     
     

@@ -1,22 +1,13 @@
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
  
 public class Aplicação{
  
     public static void main(String[] args) {
-         
-        /*
-        JOptionPane.showMessageDialog(null,"O Salário é: "+i +"\n"
-        +"A aliquota do fgts é"+taxa+"\n"
-        +"FGTS deste salário é: R$"+FGTS);
-        JOptionPane.showMessageDialog(null,"A aliquota do fgts é " + taxa);
-        JOptionPane.showMessageDialog(null,"FGTS deste salário é: R$"+FGTS);
-        String nome = JOptionPane.showInputDialog("Digite o nome: ");
-        String sobreNome = JOptionPane.showInputDialog("Digite o sobrenome: ");
-        String nomeCompleto = nome + " " + sobreNome;
-         */
-        //int CLOSED_OPTION = JOptionPane.CLOSED_OPTION;
         
-        JOptionPane.showMessageDialog(null, "aviso sobre procurar um contador \n explicando que se trata de um projeto sem fins lucrativos \n e com calculos com precisão mediana","AVISO",JOptionPane.INFORMATION_MESSAGE);
+        DecimalFormat df = new DecimalFormat("###,##0.00");
+        
+        JOptionPane.showMessageDialog(null, "Sistema criado para teste \n procure um profissional para um cálculo preciso e confiavel.","AVISO",JOptionPane.INFORMATION_MESSAGE);
         
         double salario,hr_mensal,salario_liquido;
         
@@ -32,20 +23,25 @@ public class Aplicação{
         salario_liquido = (salario - e.getVlr_INSS())- e.getVlr_IRRF();
         double total = salario_liquido + e.vlr_FGTS + e.vlr_INSS + e.vlr_IRRF + d.ferias + d.decimo + d.terco + d.FGTS_fer_decimo + d.INSS_fer_decimo + d.IRRF_fer_decimo;
         
-        JOptionPane.showMessageDialog(null,"Salário Liquido: R$ "+salario_liquido+"\n"
+        
+        JOptionPane.showMessageDialog(null,
+                  "Salário Bruto: R$ "+df.format(salario)+"\n"
                 + "\n"
-                + "FGTS: R$ "+e.vlr_FGTS+"\n"
-        + "INSS: R$ "+e.vlr_INSS+"\n"
-                + "IRRF: R$ "+e.vlr_IRRF+"\n"
-                        + "\n"
-                        + "1/12 avos de Férias: R$ "+d.ferias+"\n"
-                                + "1/12 avos de Décimo Terceiro: R$ "+d.decimo+"\n"
-                                        + "Terço Constitucional de Férias: R$ "+d.terco+"\n"
-                                                + "FGTS s/ Férias e 13º: R$ "+d.FGTS_fer_decimo+"\n"
-                                                        + "INSS s/ Férias e 13º: R$ "+d.INSS_fer_decimo+"\n"
-                                                                + "iRRF s/ Férias e 13º: R$ "+d.IRRF_fer_decimo+"\n"
-                                                                        + "\n"
-                                                                        + "TOTAL: "+total);
+                + "Valores a serem pagos: "+"\n"
+                + "Salário Liquido: R$ "+df.format(salario_liquido)+"\n"
+                + "\n"
+                + "FGTS: R$ "+df.format(e.vlr_FGTS)+"\n"
+                + "INSS: R$ "+df.format(e.vlr_INSS)+"\n"
+                + "IRRF: R$ "+df.format(e.vlr_IRRF)+"\n"
+                + "\n"
+                + "1/12 avos de Férias: R$ "+df.format(d.ferias)+ "\n"
+                + "1/12 avos de Décimo Terceiro: R$ "+df.format(d.decimo)+ "\n"
+                + "Terço Constitucional de Férias: R$ "+df.format(d.terco)+ "\n"
+                + "FGTS s/ Férias e 13º: R$ "+df.format(d.FGTS_fer_decimo)+ "\n"
+                + "INSS s/ Férias e 13º: R$ "+df.format(d.INSS_fer_decimo)+ "\n"
+                + "iRRF s/ Férias e 13º: R$ "+df.format(d.IRRF_fer_decimo)+ "\n"
+                + "\n"
+                + "TOTAL: "+df.format(total));
         
         
         
