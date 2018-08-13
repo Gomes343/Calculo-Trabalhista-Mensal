@@ -1,4 +1,4 @@
-package CalculoTrabalhistaV02.Controller;
+package Versão02.Controller;
 
 public final class EncargosSociais{
     

@@ -1,4 +1,4 @@
-package CalculoTrabalhistaV02;
+package Versão02;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
-public class ViewController implements Initializable {
+public class FXMLController implements Initializable {
     
     @FXML private Label label;
     
