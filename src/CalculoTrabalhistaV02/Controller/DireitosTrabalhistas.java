@@ -1,7 +1,7 @@
-package Versão1;
+package CalculoTrabalhistaV02.Controller;
 
-public final class DireitosTrabalhistas{
-    
+public class DireitosTrabalhistas{
+
     double ferias;
     double decimo;
     double terco;
@@ -9,7 +9,7 @@ public final class DireitosTrabalhistas{
     double INSS_fer_decimo;
     double IRRF_fer_decimo;
     double aliquotaIRRF,deduzir;
-    
+  
     public DireitosTrabalhistas(double salario){
        calcularFerias(salario);
        calcularDecimo(salario);
@@ -18,7 +18,6 @@ public final class DireitosTrabalhistas{
        calcularINSS(salario);
        calcularIRRF(salario);
     }
-    
     public void calcularFerias(double salario){
        ferias = salario / 12;
     }
