@@ -7,7 +7,7 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="CustoTrabalhista02" default="default" basedir=".">
+<project name="CustoTrabalhistaV01" default="default" basedir=".">
     <description>Em testes e criações, livre acesso</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
