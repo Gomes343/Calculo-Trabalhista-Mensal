@@ -16,17 +16,17 @@ public final class EncargosSociais{
         this.calcularIRRF(salario);
     }
     public void calcularINSS(double salario){
-       if (salario <= 1659.38){
+       if (salario <= 1693.72){
           vlr_INSS = salario * 0.08;
        }
-       if ( (salario >= 1659.39) & (salario <= 2765.66) ){
+       if ( (salario >= 1693.73) & (salario <= 2822.90) ){
           vlr_INSS = salario * 0.09; 
        }
-       if ( (salario >= 2765.67) ){
+       if ( (salario >= 2822.91) ){
           vlr_INSS = salario * 0.11;
        }
-       if( (vlr_INSS > 608.44) ){
-          vlr_INSS = 608.44;
+       if( (vlr_INSS > 621.07) ){
+          vlr_INSS = 621.07;
        }
     }
     

@@ -18,33 +18,44 @@ public class DireitosTrabalhistas{
        calcularINSS(salario);
        calcularIRRF(salario);
     }
+    
+    
     public void calcularFerias(double salario){
        ferias = salario / 12;
     }
+    
+    
     public void calcularDecimo(double salario){
-       decimo = salario /12;
+       decimo = salario / 12;
     }
+    
+    
     public void calcularTerco(double salario){
        terco = ferias / 3;
     }
+    
+    
     public void calcularFGTS(double salario){
-        FGTS_fer_decimo = (ferias+decimo) * 0.08;
+        FGTS_fer_decimo = (ferias+decimo+terco) * 0.08;
     }
+    
+    
     public void calcularINSS(double salario){
-       if (salario <= 1659.38){
+       if (salario <= 1693.72)
           INSS_fer_decimo = ((salario / 12) * 0.08) * 2;
-       }
-       if ( (salario >= 1659.39) & (salario <= 2765.66) ){
+       
+       if ( (salario >= 1693.73) & (salario <= 2822.90) )
           INSS_fer_decimo = ((salario / 12) * 0.09) * 2; 
-       }
-       if ( (salario >= 2765.67) ){
+       
+       if ( (salario >= 2822.91) & (salario <= 5645.79) ) 
           INSS_fer_decimo = ((salario / 12) * 0.11) * 2;
-       }
+       
+       if( (salario >= 5645.80 ) )
+          INSS_fer_decimo = 621.07;
     }
+    
+    
     public void calcularIRRF(double salario){
-       if (salario <= 1903.98){
-           
-       }
        if ( (salario >= 1903.99) && (salario <= 2826.65)){
            aliquotaIRRF = 0.075;
            deduzir = 142.80;
