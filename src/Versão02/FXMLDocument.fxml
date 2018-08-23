@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="275.0" prefWidth="440.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="CalculoTrabalhistaV02.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="275.0" prefWidth="440.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="Versão02.FXMLDocumentController">
     <children>
         <Button fx:id="buttonCalcular" layoutX="246.0" layoutY="210.0" onAction="#handleButtonAction" text="Calcular" />
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
